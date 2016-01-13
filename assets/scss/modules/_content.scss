@@ -1,0 +1,43 @@
+/**
+ * _content.scss
+ */
+
+.site-content {}
+
+.entry-content {
+  p.p1 {
+    padding: 0 !important;
+  }
+}
+
+/*
+Sidebar
+ */
+.widget-area {}
+
+/* Widgets */
+.widget, .hentry {
+  margin-bottom: $margin-p;
+}
+.widget {
+  input[type="text"],
+  input[type="submit"],
+  button {
+    display: inline-block;
+    vertical-align: middle;
+    height: 34px;
+    border-radius: 2px;
+  }
+  input[type="text"] {
+    border: 1px solid $border-color;
+  }
+  input[type="submit"],
+  button {
+    line-height: 1.0;
+  }
+
+  ul {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+}

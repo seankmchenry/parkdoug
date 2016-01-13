@@ -1,0 +1,97 @@
+/**
+ * _header.scss
+ */
+
+.site-header {}
+
+/*
+Navigation
+ */
+.main-navigation {
+  ul {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  &.toggled ul {
+    display: block;
+  }
+
+  @include break-sm {
+    ul {
+      display: block;
+    }
+  }
+
+  /* Sub menus */
+  .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: -9999px;
+    opacity: 0;
+    @include animate(opacity);
+  }
+  ul li:hover > .sub-menu,
+  ul li:focus > .sub-menu {
+    left: auto;
+    opacity: 1.0;
+  }
+}
+
+/*
+Mobile Menu
+ */
+.mobile-menu {
+  position: fixed;
+  top: 0; left: 0;
+  text-align: left;
+  width: 70%;
+  height: 100%;
+  padding: 0 1.5rem 1.25rem;
+  transition: all 0.375s ease;
+  text-align: left;
+  overflow-y: scroll;
+  z-index: 0;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    ul {
+      margin-left: 1.5rem;
+    }
+  }
+  li {
+    margin: 1.25rem 0 0;
+  }
+  a {
+    font-size: 1.143rem;
+    padding: 2px;
+    color: white;
+
+    &:hover,
+    &:focus {
+      color: $link-color;
+    }
+  }
+}
+.site {
+  position: relative;
+  z-index: 1;
+  @include animate(transform, 0.375s);
+
+  &.pushed {
+    transform: translateX(70%);
+  }
+}
+
+/* Button */
+.menu-toggle {
+  display: block;
+  @include button;
+
+  @include break-sm {
+    display: none;
+  }
+}

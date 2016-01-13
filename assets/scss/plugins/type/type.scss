@@ -1,0 +1,48 @@
+/**
+ * type.scss
+ */
+
+html {
+  font-size: $font-xs;
+
+  @include break-sm {
+    font-size: $font-sm;
+  }
+  @include break-lg {
+    font-size: $font-lg;
+  }
+}
+
+body {
+  font-family: $font-main;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $text-color;
+}
+
+p, .p {
+  font-size: 1rem;
+  margin-bottom: 1.3rem;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
+  margin: 1.414rem 0 0.5rem;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1, .h1 {
+  margin-top: 0;
+  font-size: 2.074rem;
+}
+
+h2, .h2 { font-size: 1.728rem; }
+
+h3, .h3 { font-size: 1.44rem; }
+
+h4, .h4 { font-size: 1.2rem; }
+
+small, .small { font-size: 0.833em; }

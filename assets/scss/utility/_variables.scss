@@ -1,0 +1,47 @@
+/**
+ * _variables.scss
+ */
+
+/*
+Typography
+ */
+/* Variables */
+$sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+/* Definitions */
+$font-main: $sans-serif;
+
+/* Sizes */
+$font-xs: 14px !default;
+$font-sm: 15px !default;
+$font-lg: 16px !default;
+
+/*
+Colors
+ */
+/* Variables */
+$blue: #107DC1;
+$gray-dark: #404040;
+$gray-light: #EEE;
+
+$brand-colors: (
+  'blue': #107DC1
+);
+
+/* Definitions */
+$border-color: $gray-light;
+$link-color: $blue;
+$text-color: $gray-dark;
+
+/*
+Screen widths
+ */
+$width-xs: 35rem !default;
+$width-sm: 48rem !default;
+$width-md: 62rem !default;
+$width-lg: 100rem !default;
+
+/*
+Margins
+ */
+$margin-p: 1.3rem;

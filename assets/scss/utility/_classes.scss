@@ -1,0 +1,88 @@
+/**
+ * _utility.scss
+ */
+
+/*
+Colors
+ */
+.color--body { color: $text-color; }
+.color--link { color: $link-color; }
+
+/*
+Display
+ */
+.dsp--bl { display: block; }
+.dsp--in { display: inline; }
+.dsp--ib { display: inline-block; }
+
+/*
+Mixins
+ */
+.bg-cover {
+  @include bg-cover;
+}
+.button {
+  @include button;
+}
+.sr-only {
+  @include sr-only;
+}
+
+/*
+Position
+ */
+.pos--rel { position: relative; }
+
+/*
+Stack order
+ */
+.z1, .z2, .z3, .z4 {
+  position: relative;
+}
+.z1 { z-index: 1; }
+.z2 { z-index: 2; }
+.z3 { z-index: 3; }
+.z4 { z-index: 4; }
+
+/*
+Text
+ */
+.txt--bold { font-weight: bold; }
+.txt--center { text-align: center; }
+.txt--lower { text-transform: lowercase; }
+.txt--upper { text-transform: uppercase; }
+
+/*
+Vertical alignment
+ */
+.va--top { vertical-align: top; }
+.va--middle { vertical-align: middle; }
+
+/*
+Visibility
+ */
+@media (max-width: $width-sm) {
+  .hidden-sm {
+    display: none !important;
+  }
+}
+@media (max-width: $width-md) {
+  .hidden-md {
+    display: none !important;
+  }
+}
+@media (max-width: $width-lg) {
+  .hidden-lg {
+    display: none !important;
+  }
+}
+@media (min-width: $width-md) {
+  .visible-sm {
+    display: none !important;
+  }
+}
+@media (min-width: $width-lg) {
+  .visible-md {
+    display: none !important;
+  }
+}

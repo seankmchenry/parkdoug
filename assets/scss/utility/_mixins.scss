@@ -1,0 +1,121 @@
+/**
+ * _mixins.scss
+ */
+
+/*
+Animation
+ */
+@mixin animate($transition: all, $time: .25s) {
+  transition: $transition $time ease;
+}
+@mixin no-animate() {
+  transition: none;
+}
+
+/*
+Antialiasing
+ */
+@mixin font-smoothing($value: on) {
+  @if ($value == on) {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+/*
+Background cover
+ */
+@mixin bg-cover($position: 50% 50%) {
+  background-position: $position;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*
+Brand colors
+ */
+@function brand-color($key: 'blue') {
+  @return map-get($brand-colors, $key);
+}
+
+/*
+Buttons
+ */
+@mixin button($bg-color: $link-color) {
+  display: inline-block;
+  background-color: $bg-color;
+  border-radius: 2px;
+  border: none;
+  color: white !important;
+  line-height: 1.0;
+  padding: 0.625rem 1rem;
+  @include animate(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: darken($bg-color, 7.5%);
+  }
+}
+
+/*
+Clearfix
+ */
+@mixin clearfix() {
+  &:after,
+  &:before {
+    content: "";
+    display: table;
+    table-layout: fixed;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/*
+Media queries
+ */
+@mixin break-xs {
+  @media (min-width: $width-xs) {
+    @content
+  }
+}
+@mixin break-sm {
+  @media (min-width: $width-sm) {
+    @content
+  }
+}
+@mixin break-md {
+  @media (min-width: $width-md) {
+    @content
+  }
+}
+@mixin break-lg {
+  @media (min-width: $width-lg) {
+    @content
+  }
+}
+
+/*
+Screen reader only
+ */
+@mixin sr-only {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/*
+Vertical centering
+ */
+@mixin vert-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

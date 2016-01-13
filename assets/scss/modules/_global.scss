@@ -1,0 +1,72 @@
+/**
+ * _global.scss
+ */
+
+/*
+Elements
+ */
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+  @include font-smoothing(on);
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  @include animate(color);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: darken($link-color, 10%);
+  }
+  &:focus {
+    outline: thin dotted $border-color;
+  }
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+}
+
+hr, ul, ol, dd, table {
+  margin-bottom: $margin-p;
+}
+
+/*
+Clearings
+ */
+.clear,
+.entry-content,
+.comment-content,
+.site-header,
+.site-content,
+.site-footer {
+  @include clearfix;
+}
+
+/*
+Alignment
+ */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: $margin-p;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: $margin-p;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
