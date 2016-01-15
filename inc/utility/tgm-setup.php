@@ -11,11 +11,6 @@
 include_once get_template_directory() . '/inc/vendor/tgm-plugin-activation/class-tgm-plugin-activation.php';
 
 /**
- * Reset install notice if previously dismissed.
- */
-// TGM_Plugin_Activation::get_instance()->update_dismiss();
-
-/**
  * Register the required plugins for this theme.
  */
 function _s_register_required_plugins() {
@@ -122,3 +117,8 @@ function _s_register_required_plugins() {
 	tgmpa( $plugins, $config );
 }
 add_action( 'tgmpa_register', '_s_register_required_plugins' );
+
+/**
+ * Reset install notice if previously dismissed.
+ */
+// TGM_Plugin_Activation::get_instance()->update_dismiss();

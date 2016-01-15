@@ -19,9 +19,9 @@ function _s_body_classes( $classes ) {
 		$classes[] = 'group-blog';
 	}
 
-  /* Contact Page */
-  if ( is_page_template( 'page-templates/contact-page.php' ) ) {
-    $classes[] = 'contact-page';
+  /* About Page */
+  if ( is_page_template( 'page-templates/about-page.php' ) ) {
+    $classes[] = 'about-page';
   }
 
 	return $classes;

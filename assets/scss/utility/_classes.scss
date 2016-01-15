@@ -24,7 +24,7 @@ Mixins
 .button {
   @include button;
 }
-.sr-only {
+.screen-reader-text {
   @include sr-only;
 }
 
