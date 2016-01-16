@@ -24,6 +24,11 @@ function _s_body_classes( $classes ) {
     $classes[] = 'about-page';
   }
 
+  /* Non-grid pages */
+  if ( !is_front_page() && !is_tax() ) {
+    $classes[] = 'padded-content';
+  }
+
 	return $classes;
 }
 add_filter( 'body_class', '_s_body_classes' );

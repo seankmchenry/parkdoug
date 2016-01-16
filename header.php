@@ -17,6 +17,9 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+<!-- Web fonts -->
+<link href='https://fonts.googleapis.com/css?family=Varela+Round|Open+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
+
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -32,15 +35,21 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<p class="site-description screen-reader-text"><?php bloginfo( 'description' ); ?></p>
-		</div><!-- .site-branding -->
+		<div class="container">
+			<div class="row middle-xs">
+				<div class="col-xs-6">
+					<div class="site-branding">
+						<h1 class="site-title m0"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<p class="site-description screen-reader-text"><?php bloginfo( 'description' ); ?></p>
+					</div><!-- .site-branding -->
+				</div>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle btn btn-primary" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '_s' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+				<div class="col-xs-6 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+						<button class="menu-toggle btn btn-primary" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', '_s' ); ?></button>
+						<?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav', 'container_class' => 'nav-menu--container' ) ); ?>
+					</nav><!-- #site-navigation -->
+				</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

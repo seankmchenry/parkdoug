@@ -11,8 +11,8 @@ get_header(); ?>
 
   <div class="container">
     <div class="row">
-      <div class="col-xs-12">
 
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
       	<div id="primary" class="content-area">
       		<main id="main" class="site-main" role="main">
 
@@ -24,6 +24,15 @@ get_header(); ?>
                 </header><!-- .entry-header -->
 
                 <div class="entry-content">
+                  <?php /* Bio Photo */
+                  if ( get_field( 'bio_photo' ) ) {
+                    $photo = get_field( 'bio_photo' );
+                    $p_url = $photo['sizes']['large'];
+                    $p_alt = $photo['alt']; ?>
+
+                    <img class="bio-image mb3" src="<?php echo $p_url; ?>" alt="<?php echo $p_alt; ?>">
+                  <?php } ?>
+
                   <?php the_content(); ?>
                   <?php
                     wp_link_pages( array(
@@ -38,8 +47,8 @@ get_header(); ?>
 
       		</main><!-- #main -->
       	</div><!-- #primary -->
-
       </div>
+
     </div><!-- .row -->
   </div><!-- .container -->
 

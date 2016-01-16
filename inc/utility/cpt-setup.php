@@ -14,27 +14,37 @@ include_once get_template_directory() . '/inc/vendor/wp-custom-post-type-class/s
 // https://developer.wordpress.org/resource/dashicons
 
 /**
- * CPT: Custom Posts
+ * CPT: Photos
  */
-$custom_post_labels = array(
-  'post_type_name' => 'custom_post',
-  'singular' => 'Custom Post',
-  'plural' => 'Custom Posts',
-  'slug' => 'custom-posts'
+$photo_labels = array(
+  'post_type_name' => 'photo',
+  'singular' => 'Photo',
+  'plural' => 'Photos',
+  'slug' => 'photos'
 );
-$custom_post_options = array(
+$photo_options = array(
   'public' => true,
-  'has_archive' => false,
-  'rewrite' => false,
+  'has_archive' => true,
   'supports' => array( 'editor', 'revisions', 'thumbnail', 'title' ),
-  'menu_icon' => 'dashicons-format-quote'
+  'rewrite' => array( 'slug' => 'photos' ),
+  'menu_icon' => 'dashicons-camera'
 );
-$custom_post = new CPT( $custom_post_labels, $custom_post_options );
+$photo = new CPT( $photo_labels, $photo_options );
+
+/**
+ * Tax: Photo Category
+ */
+$photo->register_taxonomy( array(
+  'taxonomy_name' => 'photo_category',
+  'singular' => 'Photo Category',
+  'plural' => 'Photo Categories',
+  'slug' => 'photo-category'
+) );
 
 /**
  * Featured image column
  */
-$cpts = array( $custom_post );
+$cpts = array( $photo );
 
 // add column to each $cpt setup variable
 if ( $cpts ) {
@@ -52,5 +62,8 @@ if ( $cpts ) {
 				the_post_thumbnail( array( 64, 64 ) );
 			}
 		} );
+    $cpt->populate_column( 'p_cat', function( $column, $post ) {
+      echo get_the_term_list( $post->ID, 'photo_category', '', ', ', '' );
+    } );
 	}
 }

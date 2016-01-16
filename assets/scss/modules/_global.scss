@@ -13,6 +13,9 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+.site {
+  background-color: white;
+}
 
 a {
   color: $link-color;

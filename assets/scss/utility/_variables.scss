@@ -6,10 +6,12 @@
 Typography
  */
 /* Variables */
-$sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$sans-main: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+$sans-alt: 'Varela Round', 'Helvetica Neue', Helvetica, sans-serif;
 
 /* Definitions */
-$font-main: $sans-serif;
+$body-font: $sans-main;
+$heading-font: $sans-alt;
 
 /* Sizes */
 $font-xs: 14px !default;
@@ -23,6 +25,8 @@ Colors
 $blue: #107DC1;
 $gray-dark: #404040;
 $gray-light: #EEE;
+$periwinkle: #444349;
+$red-orange: #CC3300;
 
 $brand-colors: (
   'blue': #107DC1
@@ -30,7 +34,7 @@ $brand-colors: (
 
 /* Definitions */
 $border-color: $gray-light;
-$link-color: $blue;
+$link-color: $red-orange;
 $text-color: $gray-dark;
 
 /*
