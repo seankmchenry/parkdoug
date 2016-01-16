@@ -40,15 +40,13 @@ remove_action( 'wp_print_styles', 'print_emoji_styles' );
  *
  * @link http://codex.wordpress.org/Function_Reference/add_image_size
  */
-update_option( 'large_size_w', 1024 );
-update_option( 'large_size_h', 768 );
+update_option( 'large_size_w', 950 );
+update_option( 'large_size_h', 950 );
 update_option( 'large_crop', 0 );
 
-update_option( 'medium_size_w', 600 );
-update_option( 'medium_size_h', 450 );
-update_option( 'medium_crop', 1 );
-
-add_image_size( 'hero', 1600, 640, false );
+update_option( 'medium_size_w', 650 );
+update_option( 'medium_size_h', 650 );
+update_option( 'medium_crop', 0 );
 
 /**
  * Customizer additions.

@@ -26,7 +26,7 @@ function _s_body_classes( $classes ) {
 
   /* Non-grid pages */
   if ( !is_front_page() && !is_tax() ) {
-    $classes[] = 'padded-content';
+    $classes[] = 'padded';
   }
 
 	return $classes;

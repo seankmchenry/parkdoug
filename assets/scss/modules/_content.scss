@@ -1,8 +1,7 @@
 /**
  * _content.scss
  */
-
-.padded-content {
+.padded {
   .site-content {
     padding: 1.5rem 0;
 
@@ -26,11 +25,25 @@
       padding: 0 !important;
     }
   }
+  a {
+    color: $link-color--content;
+
+    &:hover,
+    &:focus {
+      color: $link-color;
+    }
+  }
 }
 
 /*
 Photos
  */
+.grid-container {
+  padding: 0.25rem;
+}
+.grid {
+  margin-top: -0.5rem;
+}
 .grid-item,
 .grid-item img {
   display: block;
@@ -44,6 +57,9 @@ Photos
   @include break-lg {
     width: 25%;
   }
+}
+.grid-item img {
+  padding: 0.25rem;
 }
 
 /*

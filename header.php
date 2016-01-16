@@ -18,7 +18,7 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <!-- Web fonts -->
-<link href='https://fonts.googleapis.com/css?family=Varela+Round|Open+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Varela+Round|Arimo:400,400italic,700' rel='stylesheet' type='text/css'>
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,7 +39,7 @@
 			<div class="row middle-xs">
 				<div class="col-xs-6">
 					<div class="site-branding">
-						<h1 class="site-title m0"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<h1 class="site-title m0 h3"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 						<p class="site-description screen-reader-text"><?php bloginfo( 'description' ); ?></p>
 					</div><!-- .site-branding -->
 				</div>

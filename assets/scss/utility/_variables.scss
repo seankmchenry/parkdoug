@@ -6,12 +6,12 @@
 Typography
  */
 /* Variables */
-$sans-main: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
-$sans-alt: 'Varela Round', 'Helvetica Neue', Helvetica, sans-serif;
+$arimo: 'Arimo', 'Helvetica Neue', Helvetica, sans-serif;
+$varela: 'Varela Round', 'Helvetica Neue', Helvetica, sans-serif;
 
 /* Definitions */
-$body-font: $sans-main;
-$heading-font: $sans-alt;
+$body-font: $arimo;
+$heading-font: $varela;
 
 /* Sizes */
 $font-xs: 14px !default;
@@ -24,6 +24,7 @@ Colors
 /* Variables */
 $blue: #107DC1;
 $gray-dark: #404040;
+$gray-medium: #777;
 $gray-light: #EEE;
 $periwinkle: #444349;
 $red-orange: #CC3300;
@@ -34,7 +35,8 @@ $brand-colors: (
 
 /* Definitions */
 $border-color: $gray-light;
-$link-color: $red-orange;
+$link-color: $gray-medium;
+$link-color--content: $red-orange;
 $text-color: $gray-dark;
 
 /*

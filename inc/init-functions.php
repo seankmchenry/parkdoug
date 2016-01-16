@@ -95,3 +95,14 @@ function _s_get_phone_link( $phone ) {
   $link = "tel:" . $phone;
   return $link;
 }
+
+/**
+ * Get initials from name
+ */
+function _s_get_initials( $name ) {
+  $words = explode( " ", $name );
+  foreach ( $words as $word ) {
+    $letters .= $word{0};
+  }
+  return strtoupper( $letters );
+}
