@@ -163,9 +163,9 @@ Strip.js
 .strp-nav {
   position: absolute;
   top: 50%;
-  width: 54px;
-  height: 72px;
-  margin: 0 9px;
+  width: 42px;
+  height: 56px;
+  margin: 0 5px;
   margin-top: -36px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -293,11 +293,11 @@ Strip.js
 }
 
 .strp-window-skin-strip .strp-nav-button-background { background-color: transparent; }
-.strp-window-skin-strip .strp-nav-previous .strp-nav-button-icon { background-image: url('../img/strip/previous.svg');  }
-.strp-window-skin-strip .strp-nav-next .strp-nav-button-icon { background-image: url('../img/strip/next.svg'); }
+.strp-window-skin-strip .strp-nav-previous .strp-nav-button-icon { background-image: url('../img/strip/previous.svg'); background-size: 42px 56px; }
+.strp-window-skin-strip .strp-nav-next .strp-nav-button-icon { background-image: url('../img/strip/next.svg'); background-size: 42px 56px; }
 
-.strp-window-skin-strip.strp-no-svg .strp-nav-previous .strp-nav-button-icon { background-image: url('../img/strip/previous-faded.png'); opacity: 1; }
-.strp-window-skin-strip.strp-no-svg .strp-nav-next .strp-nav-button-icon { background-image: url('../img/strip/next-faded.png'); opacity: 1; }
+.strp-window-skin-strip.strp-no-svg .strp-nav-previous .strp-nav-button-icon { background-image: url('../img/strip/previous-faded.png'); opacity: 1; background-size: 42px 56px; }
+.strp-window-skin-strip.strp-no-svg .strp-nav-next .strp-nav-button-icon { background-image: url('../img/strip/next-faded.png'); opacity: 1; background-size: 42px 56px; }
 
 .strp-window-skin-strip .strp-nav .strp-nav-button-icon { opacity: .6; } /* normal state */
 .strp-window-skin-strip.strp-mobile-touch .strp-nav .strp-nav-button-icon { opacity: 1; } /* mobile-touch always has normal states at full opacity */
@@ -306,29 +306,29 @@ Strip.js
 .strp-window-skin-strip .strp-nav-hover .strp-nav-button-icon { opacity: 1; }
 
 .strp-window-skin-strip.strp-no-svg .strp-nav.strp-nav-previous:hover .strp-nav-button-icon,
-.strp-window-skin-strip.strp-no-svg .strp-nav-hover.strp-nav-previous .strp-nav-button-icon { background-image: url('../img/strip/previous.png'); }
+.strp-window-skin-strip.strp-no-svg .strp-nav-hover.strp-nav-previous .strp-nav-button-icon { background-image: url('../img/strip/previous.png'); background-size: 42px 56px; }
 .strp-window-skin-strip.strp-no-svg .strp-nav.strp-nav-next:hover .strp-nav-button-icon,
-.strp-window-skin-strip.strp-no-svg .strp-nav-hover.strp-nav-next .strp-nav-button-icon { background-image: url('../img/strip/next.png'); }
+.strp-window-skin-strip.strp-no-svg .strp-nav-hover.strp-nav-next .strp-nav-button-icon { background-image: url('../img/strip/next.png'); background-size: 42px 56px; }
 
 @media all and (max-width: 375px) and (orientation: portrait),
        all and (max-height: 375px) and (max-width: 667px) {
   .strp-window-skin-strip .strp-nav {
-    width: 48px;
-    height: 60px;
-    margin: 0 5px;
+    width: 36px;
+    height: 45px;
+    margin: 0;
     margin-top: -30px;
   }
 
-  .strp-window-skin-strip .strp-nav-previous .strp-nav-button-icon { background-image: url('../img/strip/previous-small.svg');  }
-  .strp-window-skin-strip .strp-nav-next .strp-nav-button-icon { background-image: url('../img/strip/next-small.svg'); }
+  .strp-window-skin-strip .strp-nav-previous .strp-nav-button-icon { background-image: url('../img/strip/previous-small.svg'); background-size: 36px 45px; }
+  .strp-window-skin-strip .strp-nav-next .strp-nav-button-icon { background-image: url('../img/strip/next-small.svg'); background-size: 36px 45px; }
 
-  .strp-window-skin-strip.strp-no-svg .strp-nav-previous .strp-nav-button-icon { background-image: url('../img/strip/previous-small-faded.png'); }
-  .strp-window-skin-strip.strp-no-svg .strp-nav-next .strp-nav-button-icon { background-image: url('../img/strip/next-small-faded.png'); }
+  .strp-window-skin-strip.strp-no-svg .strp-nav-previous .strp-nav-button-icon { background-image: url('../img/strip/previous-small-faded.png'); background-size: 36px 45px; }
+  .strp-window-skin-strip.strp-no-svg .strp-nav-next .strp-nav-button-icon { background-image: url('../img/strip/next-small-faded.png'); background-size: 36px 45px; }
 
   .strp-window-skin-strip.strp-no-svg .strp-nav.strp-nav-previous:hover .strp-nav-button-icon,
-  .strp-window-skin-strip.strp-no-svg .strp-nav-hover.strp-nav-previous .strp-nav-button-icon { background-image: url('../img/strip/previous-small.png'); }
+  .strp-window-skin-strip.strp-no-svg .strp-nav-hover.strp-nav-previous .strp-nav-button-icon { background-image: url('../img/strip/previous-small.png'); background-size: 36px 45px; }
   .strp-window-skin-strip.strp-no-svg .strp-nav.strp-nav-next:hover .strp-nav-button-icon,
-  .strp-window-skin-strip.strp-no-svg .strp-nav-hover.strp-nav-next .strp-nav-button-icon { background-image: url('../img/strip/next-small.png'); }
+  .strp-window-skin-strip.strp-no-svg .strp-nav-hover.strp-nav-next .strp-nav-button-icon { background-image: url('../img/strip/next-small.png'); background-size: 36px 45px; }
 
   .strp-no-overlap .strp-container { padding: 48px 58px; }
   .strp-no-overlap.strp-no-sides .strp-container { padding: 48px 0; }

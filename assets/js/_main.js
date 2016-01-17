@@ -24,9 +24,12 @@ var Roots = {
     init: function() {
       /* Isotope */
       if ( $('.grid').length > 0 ) {
-        $('.grid').masonry({
+        var $grid = $('.grid').masonry({
           itemSelector: '.grid-item',
           percentPosition: true
+        });
+        $grid.imagesLoaded().progress(function() {
+          $grid.masonry('layout');
         });
       }
     }

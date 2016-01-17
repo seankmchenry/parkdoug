@@ -1,15 +1,6 @@
 /**
  * _content.scss
  */
-.padded {
-  .site-content {
-    padding: 1.5rem 0;
-
-    @include break-sm {
-      padding: 2rem 0;
-    }
-  }
-}
 
 .page-title,
 .entry-title {
@@ -41,17 +32,18 @@ Photos
 .grid-container {
   padding: 0.25rem;
 }
-.grid {
-  margin-top: -0.5rem;
-}
 .grid-item,
 .grid-item img {
   display: block;
 }
 .grid-item {
-  width: 50%;
+  display: inline-block;
+  width: 100%;
 
   @include break-sm {
+    width: 50%;
+  }
+  @include break-md {
     width: 33%;
   }
   @include break-lg {
@@ -60,6 +52,7 @@ Photos
 }
 .grid-item img {
   padding: 0.25rem;
+  min-width: 100%;
 }
 
 /*

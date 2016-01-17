@@ -17,7 +17,7 @@
 	});
 
   $(document).mouseup(function(e) {
-    var myTarget = $('.mobile-menu');
+    var myTarget = $('.mobile-menu .menu');
     if ( !myTarget.is(e.target) && ( myTarget.has(e.target).length === 0 ) ) {
       $('.site').removeClass('pushed');
     }
