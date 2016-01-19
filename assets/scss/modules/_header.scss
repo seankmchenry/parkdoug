@@ -46,9 +46,18 @@ Navigation
     li {
       display: inline;
       padding: 0 0.5rem;
+
+      &:first-of-type {
+        padding-left: 0;
+      }
     }
     a {
       display: inline-block;
+    }
+  }
+  @include break-md {
+    li {
+      padding: 0 0.75rem;
     }
   }
 

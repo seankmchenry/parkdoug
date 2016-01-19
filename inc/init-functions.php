@@ -106,3 +106,15 @@ function _s_get_initials( $name ) {
   }
   return strtoupper( $letters );
 }
+
+/**
+ * Show all posts on tax archives
+ */
+function _s_tax_archive_post_num( $query ) {
+  if ( !is_admin() && $query->is_main_query() ) {
+    if( is_tax() ) {
+      $query->set( 'posts_per_page', -1 );
+    }
+  }
+}
+add_action( 'pre_get_posts', '_s_tax_archive_post_num' );

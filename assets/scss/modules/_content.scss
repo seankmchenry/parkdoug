@@ -38,21 +38,28 @@ Photos
 }
 .grid-item {
   display: inline-block;
-  width: 100%;
+  width: 50%;
 
   @include break-sm {
-    width: 50%;
+    width: 25%;
   }
   @include break-md {
-    width: 33%;
+    width: 16.667%;
   }
   @include break-lg {
-    width: 25%;
+    width: 12.5%;
   }
 }
 .grid-item img {
   padding: 0.25rem;
   min-width: 100%;
+  -webkit-backface-visibility: hidden;
+  @include animate(opacity);
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
 }
 
 /*
