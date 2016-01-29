@@ -65,10 +65,17 @@ if(function_exists("register_field_group"))
           'order_no' => 0,
           'group_no' => 0,
         ),
+        array (
+          'param' => 'page_template',
+          'operator' => '!=',
+          'value' => 'page-templates/home-page.php',
+          'order_no' => 1,
+          'group_no' => 0,
+        ),
       ),
     ),
     'options' => array (
-      'position' => 'normal',
+      'position' => 'acf_after_title',
       'layout' => 'no_box',
       'hide_on_screen' => array (
       ),
