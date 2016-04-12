@@ -47,7 +47,7 @@
 				<div class="col-xs-6 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
 					<nav id="site-navigation" class="main-navigation" role="navigation">
 						<button class="menu-toggle btn btn-primary icon-menu" aria-controls="primary-menu" aria-expanded="false"></button>
-						<?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav', 'container_class' => 'nav-menu--container' ) ); ?>
+						<?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav', 'menu_class' => 'main-nav--menu', 'container_class' => 'nav-container' ) ); ?>
 					</nav><!-- #site-navigation -->
 				</div>
 	</header><!-- #masthead -->

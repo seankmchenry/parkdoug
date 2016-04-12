@@ -54,12 +54,6 @@ function _s_register_required_plugins() {
       'force_activation' => true
     ),
     array(
-      'name' => 'Clef Two-Factor Authentication',
-      'slug' => 'wpclef',
-      'required' => true,
-      'force_activation' => true
-    ),
-    array(
       'name' => 'WP Super Cache',
       'slug' => 'wp-super-cache',
       'required' => true,

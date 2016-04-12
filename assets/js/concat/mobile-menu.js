@@ -6,19 +6,27 @@
  */
 
 (function($){
-	// clone the menu
-	var myClone = $('.nav-menu--container').clone();
-	myClone.addClass('mobile-menu');
+  // clone the main nav menu
+  var myClone = $('#site-navigation .nav-container').clone();
 
-	$('body').prepend(myClone);
+  // prepend it to <body> tag
+  $(document.body).prepend(myClone);
 
-	$('.menu-toggle').click(function() {
-		$('.site').toggleClass('pushed');
-	});
+  // add mobile class
+  myClone.addClass('mobile-menu');
 
+  // add click function to toggle class
+  $('.menu-toggle').click(function() {
+    $('.site').toggleClass('pushed');
+  });
+
+  // remove class if click outside menu
   $(document).mouseup(function(e) {
-    var myTarget = $('.mobile-menu .menu');
-    if ( !myTarget.is(e.target) && ( myTarget.has(e.target).length === 0 ) ) {
+    var menuArea = $('.mobile-menu .menu');
+    var menuButton = $('.menu-toggle');
+
+    // check if menu area is targeted
+    if ( !menuArea.is(e.target) && !menuButton.is(e.target) ) {
       $('.site').removeClass('pushed');
     }
   });

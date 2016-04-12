@@ -25,7 +25,7 @@ $photo_labels = array(
 $photo_options = array(
   'public' => true,
   'has_archive' => true,
-  'supports' => array( 'editor', 'revisions', 'thumbnail', 'title' ),
+  'supports' => array( 'revisions', 'thumbnail', 'title' ),
   'rewrite' => array( 'slug' => 'photos' ),
   'menu_icon' => 'dashicons-camera'
 );
