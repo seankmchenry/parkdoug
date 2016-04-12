@@ -33,6 +33,12 @@ function _s_register_required_plugins() {
       'force_activation' => true
     ),
     array(
+      'name' => 'Enable Media Replace',
+      'slug' => 'enable-media-replace',
+      'required' => true,
+      'force_activation' => true
+    ),
+    array(
       'name' => 'Force Regenerate Thumbnails',
       'slug' => 'force-regenerate-thumbnails',
       'required' => true,
@@ -50,6 +56,12 @@ function _s_register_required_plugins() {
     array(
       'name' => 'Akismet',
       'slug' => 'akismet',
+      'required' => true,
+      'force_activation' => true
+    ),
+    array(
+      'name' => 'Brute Force Login Protection',
+      'slug' => 'brute-force-login-protection',
       'required' => true,
       'force_activation' => true
     ),
