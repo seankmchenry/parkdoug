@@ -7,6 +7,8 @@ Salvattore
  */
 .grid[data-columns]::before {
   content: '2 .column.size-1of2';
+  // hide column loading text
+  color: transparent;
 
   @include break-sm {
     content: '4 .column.size-1of4';
