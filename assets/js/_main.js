@@ -21,18 +21,7 @@
 var Roots = {
   /* Common */
   common: {
-    init: function() {
-      /* Isotope */
-      if ( $('.grid').length > 0 ) {
-        var $grid = $('.grid').masonry({
-          itemSelector: '.grid-item',
-          percentPosition: true
-        });
-        $grid.imagesLoaded().progress(function() {
-          $grid.masonry('layout');
-        });
-      }
-    }
+    init: function() {}
   },
   /* Home */
   home: {

@@ -32,25 +32,8 @@ Photos
 .grid-container {
   padding: 0.25rem;
 }
-.grid-item,
-.grid-item img {
+.column img {
   display: block;
-}
-.grid-item {
-  display: inline-block;
-  width: 50%;
-
-  @include break-sm {
-    width: 25%;
-  }
-  @include break-md {
-    width: 16.667%;
-  }
-  @include break-lg {
-    width: 12.5%;
-  }
-}
-.grid-item img {
   padding: 0.25rem;
   min-width: 100%;
   -webkit-backface-visibility: hidden;

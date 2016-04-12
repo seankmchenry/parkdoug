@@ -18,13 +18,13 @@ get_header(); ?>
 				<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
 			</header><!-- .page-header -->
 
-			<div class="photo-section grid">
+			<div class="photo-section grid" data-columns>
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php /* Image */
 					if ( has_post_thumbnail() ) { ?>
-						<a class="grid-item strip" href="<?php echo _s_get_feat_img_url( 'full' ); ?>" data-strip-group="strip" data-strip-caption="<?php the_title(); ?>">
+						<a class="column strip" href="<?php echo _s_get_feat_img_url( 'full' ); ?>" data-strip-group="strip" data-strip-caption="<?php the_title(); ?>">
 							<?php the_post_thumbnail( 'medium' ); ?>
 						</a>
 					<?php } ?>

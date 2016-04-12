@@ -31,7 +31,7 @@ get_header(); ?>
 						// are there posts?
 						if ( $my_query->have_posts() ) { ?>
 							<div class="grid-container">
-								<div class="photo-section photo-section--home grid">
+								<div class="photo-section photo-section--home grid" data-columns>
 									<?php // loop through them if so
 									while( $my_query->have_posts() ) {
 										// set up the post
@@ -39,7 +39,7 @@ get_header(); ?>
 
 										/* Image */
 										if ( has_post_thumbnail() ) { ?>
-											<a class="grid-item strip" href="<?php echo _s_get_feat_img_url( 'full' ); ?>" data-strip-group="strip" data-strip-caption="<?php the_title(); ?>">
+											<a class="column strip" href="<?php echo _s_get_feat_img_url( 'full' ); ?>" data-strip-group="strip" data-strip-caption="<?php the_title(); ?>">
 												<?php the_post_thumbnail( 'medium' ); ?>
 											</a>
 										<?php }
